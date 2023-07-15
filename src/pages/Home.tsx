@@ -1,6 +1,5 @@
 import "./Home.css";
-import books from "../mocks/books.json";
-import { BookCard } from "../components/BookCard/BookCard";
+import { ListOfBooks } from "../components/ListOfBooks/ListOfBooks";
 
 export const Home = () => {
   return (
@@ -25,11 +24,7 @@ export const Home = () => {
           </select>
         </label>
       </div>
-      <ul className="ListOfBooks">
-        {books.library.map(({ book }) => (
-          <BookCard cover={book.cover} title={book.title} key={book.ISBN} />
-        ))}
-      </ul>
+      <ListOfBooks />
     </section>
   );
 };
