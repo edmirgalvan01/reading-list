@@ -1,5 +1,6 @@
 import "./Home.css";
 import { ListOfBooks } from "../components/ListOfBooks/ListOfBooks";
+import { Filters } from "../components/Filters/Filters";
 
 export const Home = () => {
   return (
@@ -8,25 +9,7 @@ export const Home = () => {
       <h3>
         8 libros disponibles <small>(2 en la lista de lectura)</small>
       </h3>
-      <div className="Filters">
-        <label>
-          Filtrar por titulo
-          <input type="text" name="search" id="search" />
-        </label>
-        <label>
-          Filtrar por paginas
-          <input type="range" name="pages" id="pages" min="0" max="100" />
-        </label>
-        <label>
-          Filtrar por genero
-          <select name="genres" id="genres">
-            <option defaultValue="true">Todas</option>
-            <option value="Fantasía">Fantasía</option>
-            <option value="Ciencia ficción">Ciencia ficción</option>
-            <option value="Terror">Terror</option>
-          </select>
-        </label>
-      </div>
+      <Filters />
       <ListOfBooks />
     </section>
   );

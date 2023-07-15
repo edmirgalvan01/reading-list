@@ -1,0 +1,17 @@
+.Filters {
+  display: flex;
+  gap: 40px;
+}
+.Filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 200px;
+}
+.Filters label input[type="text"] {
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  height: 25px;
+  padding-left: 10px;
+}
