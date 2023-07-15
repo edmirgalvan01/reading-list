@@ -1,5 +1,6 @@
 import "./Home.css";
 import books from "../mocks/books.json";
+import { BookCard } from "../components/BookCard/BookCard";
 
 export const Home = () => {
   return (
@@ -17,16 +18,16 @@ export const Home = () => {
         <label>
           Filtrar por genero
           <select name="genres" id="genres">
-            <option selected>Todas</option>
+            <option defaultValue="true">Todas</option>
             <option value="Fantasía">Fantasía</option>
             <option value="Ciencia ficción">Ciencia ficción</option>
             <option value="Terror">Terror</option>
           </select>
         </label>
       </div>
-      <ul>
+      <ul className="ListOfBooks">
         {books.library.map(({ book }) => (
-          <li>{book.title}</li>
+          <BookCard cover={book.cover} title={book.title} key={book.ISBN} />
         ))}
       </ul>
     </section>
