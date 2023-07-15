@@ -1,0 +1,7 @@
+.ListOfBooks {
+  list-style: none;
+  width: 60%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}

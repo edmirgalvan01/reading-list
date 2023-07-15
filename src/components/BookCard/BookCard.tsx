@@ -1,3 +1,5 @@
+import "./BookCard.css";
+
 interface Props {
   title: string;
   cover: string;
@@ -6,14 +8,7 @@ interface Props {
 export const BookCard = ({ title, cover }: Props) => {
   return (
     <li className="BookCard">
-      <img
-        style={{
-          maxWidth: "200px",
-          borderRadius: "4px",
-        }}
-        src={cover}
-        alt={title}
-      />
+      <img src={cover} alt={title} />
     </li>
   );
 };
