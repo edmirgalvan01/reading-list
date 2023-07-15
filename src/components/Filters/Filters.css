@@ -1,6 +1,7 @@
 .Filters {
   display: flex;
   gap: 40px;
+  align-items: center;
 }
 .Filters label {
   display: flex;
